@@ -13,6 +13,21 @@ class Connection {
 		}
 	}
 
+	public function insert() {
+
+	}
+
+	public function fetch() {
+
+	}
+
+	public function update() {
+
+	}
+
+	public function delete() {
+		
+	}
 
 	public function prepareSql($sql) {
 		return $this->connection->prepare($sql);
