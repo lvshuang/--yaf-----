@@ -5,6 +5,7 @@
  * 这些方法, 都接受一个参数:Yaf_Dispatcher $dispatcher
  * 调用的次序, 和申明的次序相同
  */
+use Src\DBAL\Connection;
 class Bootstrap extends Yaf_Bootstrap_Abstract{
 
 	//注册config文件
@@ -23,7 +24,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		$databaseName = $config->get('database')->databaseName;
 
 		$dsn = $type . ':' . 'dbname=' . $databaseName . ';host=' . $host;
-		Yaf_Registry::set('dbHandle', new PDO($dsn, $username, $password));
+		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}
 
 }

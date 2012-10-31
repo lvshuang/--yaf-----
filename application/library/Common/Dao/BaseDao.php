@@ -1,13 +1,15 @@
 <?php
 namespace Common\Dao;
 
-class BaseDao {
+use Common\Dao\BaseDaoInterface;
 
-	private $dbHandle;
+class BaseDao extends Connection {
+
+	private $connection;
 
 	public function __construct(){
-		if (empty($dbHandle)){
-			$this->dbHandle = \Yaf_Registry::get('dbHandle');
+		if (empty($connection)){
+			$this->connection = \Yaf_Registry::get('connection');
 		}
 	}
 
