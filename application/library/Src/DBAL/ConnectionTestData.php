@@ -19,7 +19,7 @@ class ConnectionTestData {
 			  `createdTime` int(11) NOT NULL,
 			  PRIMARY KEY (`id`),
 			  UNIQUE KEY `username` (`username`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;"
+			) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;"
 	}
 
 	public static function insertSql() {

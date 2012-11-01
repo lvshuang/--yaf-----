@@ -9,6 +9,7 @@ class Connection {
 		if (empty($this->connection)) {
 			$this->connection = new \PDO($dsn, $username, $password);
 		}
+		$this->connection->exec('SET NAMES utf8');
 	}
 
 	public function insert($table, $data) {
@@ -23,22 +24,22 @@ class Connection {
                . ' (' . implode(', ', $cols) . ')'
                . ' VALUES (' . implode(', ', $marks) . ')';
 
-		return $this->executeUpdate($query, $values);
+		return $this->executeUpdate($query, array_values($data));
 	}
 
 	public function fetchAll($sql, $params) {
 		$statement = $this->execute($sql, $params);
-		return $statement->fetchAll(PDO::FETCH_ASSOC);
+		return $statement->fetchAll(\PDO::FETCH_ASSOC);
 	}
 
 	public function fetchObject($sql, $params){
 		$statement = $this->execute($sql, $params);
-		return $statement->fetch(PDO::FETCH_OBJECT);
+		return $statement->fetch(\PDO::FETCH_OBJ);
 	}
 
 	public function fetchAssoc($sql, $params) {
-		$statement = $this->extcute($sql, $params);
-		return $statement->fetch(PDO::FETCH_ASSOC);
+		$statement = $this->execute($sql, $params);
+		return $statement->fetch(\PDO::FETCH_ASSOC);
 	}
 
 	public function update($table, $id, $data) {
