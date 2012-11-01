@@ -8,10 +8,18 @@
 use Src\DBAL\Connection;
 class Bootstrap extends Yaf_Bootstrap_Abstract{
 
+	private $config;
 	//注册config文件
 	public function _initConfig() {
-		$config = Yaf_Application::app()->getConfig();
-		Yaf_Registry::set("config", $config);
+		$this->config = Yaf_Application::app()->getConfig();
+		Yaf_Registry::set("config", $this->config);
+	}
+
+	public function _initError() {
+		if($this->config->application->showErrors){
+            error_reporting (-1);
+            ini_set('display_errors','On');
+        }
 	}
 
 	public function _initBd() {
@@ -22,7 +30,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		$username = $config->get('database')->username;
 		$password = $config->get('database')->password;
 		$databaseName = $config->get('database')->databaseName;
-
 		$dsn = $type . ':' . 'dbname=' . $databaseName . ';host=' . $host;
 		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}

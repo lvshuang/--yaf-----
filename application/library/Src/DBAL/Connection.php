@@ -3,12 +3,11 @@ namespace Src\DBAL;
 
 class Connection {
 
-	private $connection;
+	private $connection = null;
 
-	public function __construce($dsn, $username, $password){
-
-		if (!$this->connection) {
-			$this->connection = new PDO($dsn, $username, $password);
+	public function __construct($dsn, $username, $password){
+		if (empty($this->connection)) {
+			$this->connection = new \PDO($dsn, $username, $password);
 		}
 	}
 
@@ -27,25 +26,18 @@ class Connection {
 		return $this->executeUpdate($query, $values);
 	}
 
-	public function fetchAll($table, $where, $params, $fields = null, $orderBy = null, $start = 0, $limit = null) {
-		$sql = 'SELECT ';
-        $sql .= empty($fields) ? '*' : '`' . join('`,`', $fields) . '`';
-        $sql .= " FROM {$table} ";
-        $sql .= empty($where) ? '' : " WHERE {$where} ";
-        $sql .= empty($orderBy) ? '' : " ORDER BY {$orderBy}";
-        $sql .= empty($limit) ? '' : " LIMIT {$start}, {$limit}";
-
+	public function fetchAll($sql, $params) {
 		$statement = $this->execute($sql, $params);
 		return $statement->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function fetchRow($table, $where, $params, $fields = null){
-		$sql = 'SELECT ';
-		$sql .= empty($fields) ? '*' : '`' . join('`,`' $fields) . '`';
-		$sql .= " FROM {$table} ";
-		$sql .= empty($where) ? '' : "WHERE {$where} limit 1";
-
+	public function fetchObject($sql, $params){
 		$statement = $this->execute($sql, $params);
+		return $statement->fetch(PDO::FETCH_OBJECT);
+	}
+
+	public function fetchAssoc($sql, $params) {
+		$statement = $this->extcute($sql, $params);
 		return $statement->fetch(PDO::FETCH_ASSOC);
 	}
 
@@ -63,11 +55,6 @@ class Connection {
 	public function delete($table, $id) {
 		$sql = 'DELETE * FORM ' . $table . ' WHERE id=?';
 		return $this->executeUpdate($sql, $id);
-	}
-
-	public function deleteAll($table, $where, $params){
-		$sql = 'DELETE * FORM ' . $table . ' ' . $where;
-		return $this->executeUpdate($sql, $params);
 	}
 
 	public function prepareSql($sql) {
@@ -103,8 +90,7 @@ class Connection {
 		return $this->connection->lastInsertId();
 	}
 
-	private function getTable()	{
-		return $this->table;
+	public function getConnection() {
+		return $this->connection;
 	}
-
 }
