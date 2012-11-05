@@ -8,15 +8,16 @@ class UserServiceImpl extends BaseService {
 
 	protected $userDao ;
 
-	public function __construct(){
-		$db = \Yaf_Registry::get('dbHandle');
-	}
-
 	public function login(){
 
 	}
 
-	public function reg(){
+	public function reg(array $user){
+		$user['createdTime'] = time();
+		return $this->getUserDao()->addUser($user);
+	}
 
+	private function getUserDao(){
+		return new \Service\User\Dao\Impl\UserDaoImpl();
 	}
 }

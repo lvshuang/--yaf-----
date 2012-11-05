@@ -3,7 +3,7 @@ namespace Common\Dao;
 
 use Common\Dao\BaseDaoInterface;
 
-class BaseDao extends Connection {
+class BaseDao {
 
 	private $connection;
 
@@ -147,4 +147,3 @@ class BaseDao extends Connection {
     }
 }
 
-}

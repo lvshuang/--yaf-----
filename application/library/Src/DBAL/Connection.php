@@ -1,7 +1,8 @@
 <?php
 namespace Src\DBAL;
+use Common\Dao\BaseDaoInterface;
 
-class Connection {
+class Connection implements BaseDaoInterface {
 
 	private $connection = null;
 

@@ -4,10 +4,14 @@ class IndexController extends Common_Controller_Base
 	
 	public function indexAction(){
 		$request = new Yaf_Request_Http ();
-		$connection = Yaf_Registry::get('connection');
-		$a = $connection->update('user', 1, array('username'=>'何吕'));
-		var_dump($a);
-		// $this->display('index', array('name' => 'YAF实例----------'));
+		$user = array('username' => '测试', 'password'=>'123456');
+		if ($user = $this->getUserService()->reg($user)){
+			var_dump('注册成功！', $user);
+		} else {
+			var_dump('注册失败！');
+		}
+		exit;
+		$this->display('index', array('name' => 'YAF实例----------'));
 	}
 
 	public function userAction(){
