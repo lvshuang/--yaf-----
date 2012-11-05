@@ -147,3 +147,8 @@ class BaseDao {
     }
 }
 
+class DaoException extends \Exception {
+
+
+}
+

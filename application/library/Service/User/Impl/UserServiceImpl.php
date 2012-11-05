@@ -17,6 +17,10 @@ class UserServiceImpl extends BaseService {
 		return $this->getUserDao()->addUser($user);
 	}
 
+	public function getUser($id){
+		return $this->getUserDao()->findUser($id);
+	}
+
 	private function getUserDao(){
 		return new \Service\User\Dao\Impl\UserDaoImpl();
 	}

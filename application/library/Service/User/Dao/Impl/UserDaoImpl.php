@@ -12,6 +12,12 @@ class UserDaoImpl extends BaseDao{
 		return $this->insert($user);
 	}
 
+	public function findUser($id)
+	{
+		$id = (int) $id;
+		return $this->fetch($id);
+	}
+
 
 
 }

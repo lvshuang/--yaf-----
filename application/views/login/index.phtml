@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title><?php echo $name ?>你好！</title>
+		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
+	</head>
+	<body>
+		<div id="top-bar">
+			<div class="content">
+				<span class="fl">欢迎你</span>
+				<span class="fr">欢迎你</span>
+			</div>
+		</div>
+		<div id="main" class="border yuanjiao">
+			<section>
+				<div class="center sbox">
+					<form action="/login/index" method="post">
+						<?php
+							if (!empty($errorMsg)) {
+						?>
+							<div class="error"><?php echo $errorMsg ?></div>
+						<?php
+							}
+						?>
+						<p>用户名：
+						<input type="text" name="username" size=24 />
+						</p>
+						<p>密码：
+						<input type="password" name="password" size=24 />
+						</p>
+						<input type="submit" value="登录" />
+					</form>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

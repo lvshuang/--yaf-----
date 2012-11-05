@@ -9,8 +9,8 @@ class Connection implements BaseDaoInterface {
 	public function __construct($dsn, $username, $password){
 		if (empty($this->connection)) {
 			$this->connection = new \PDO($dsn, $username, $password);
+			$this->connection->exec('SET NAMES utf8');
 		}
-		$this->connection->exec('SET NAMES utf8');
 	}
 
 	public function insert($table, $data) {

@@ -1,8 +1,10 @@
 <?php
+namespace Twig;
+
 class Twig {
 
 	public function __construct() {
-		require_once '/path/to/lib/Twig/Autoloader.php';
+		require_once dirname(__FILE__) . '/lib/Twig/Autoloader.php';
 		Twig_Autoloader::register();
 
 		$loader = new Twig_Loader_Filesystem('/path/to/templates');
