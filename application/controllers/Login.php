@@ -14,4 +14,8 @@ class LoginController extends Common_Controller_Base
 		$this->display('index', array('name' => '登录 - ', 'errorMsg' => $errorMsg));
 	}
 
+	public function logoutAction(){
+
+	}
+
 }

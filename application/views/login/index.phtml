@@ -2,6 +2,7 @@
 	<head>
 		<title><?php echo $name ?>你好！</title>
 		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
 	</head>
 	<body>
 		<div id="top-bar">
@@ -13,7 +14,7 @@
 		<div id="main" class="border yuanjiao">
 			<section>
 				<div class="center sbox">
-					<form action="/login/index" method="post">
+					<form action="/login/index" method="post" class="form-horizontal">
 						<?php
 							if (!empty($errorMsg)) {
 						?>
@@ -21,13 +22,20 @@
 						<?php
 							}
 						?>
-						<p>用户名：
-						<input type="text" name="username" size=24 />
-						</p>
-						<p>密码：
-						<input type="password" name="password" size=24 />
-						</p>
-						<input type="submit" value="登录" />
+
+						<div class="control-group">
+						    <label class="control-label" for="inputEmail">用户名：</label>
+						    <div class="controls">
+						    	<input type="text" name="username" placeholder="用户名">
+						    </div>
+						</div>
+						<div class="control-group">
+						    <label class="control-label" for="inputEmail">密码：</label>
+						    <div class="controls">
+						    	<input type="password" name="password" >
+						    </div>
+						</div>
+						<input type="submit" class="btn" value="登录" />
 					</form>
 				</div>
 			</section>

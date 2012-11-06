@@ -34,4 +34,15 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}
 
+	
+	/**
+	*过滤全局变量$_GET, $_POST, $_COOKIE等
+	*@return void
+	*@param void
+	*/
+	public function _initGlobalFilter() {
+
+
+	}
+
 }
