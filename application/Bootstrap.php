@@ -34,6 +34,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}
 
+	public function _initSesson() {
+		$sesson = Yaf_Session::getInstance();
+		Yaf_Registry::set('sesson', $sesson);
+	}
+
 	
 	/**
 	*过滤全局变量$_GET, $_POST, $_COOKIE等

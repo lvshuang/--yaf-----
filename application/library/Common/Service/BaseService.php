@@ -3,8 +3,12 @@ namespace Common\Service;
 
 abstract class BaseService {
 	
-	public function AccessExpection(){
+	protected function AccessExpection(){
 		throw new \Exception("权限不足！");
+	}
+
+	protected function getSession() {
+		return \Yaf_Registry::get('sesson');
 	}
 
 }

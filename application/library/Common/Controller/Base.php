@@ -39,6 +39,15 @@ class Common_Controller_Base extends \Yaf_Controller_Abstract {
 		return isset($_POST[$key]) ? $_POST[$key] : $default;
 	}
 
+	/**
+	*获取SESSION实例
+	*@param void
+	*@return Yaf_Session
+	*/
+	protected function getSession() {
+		return \Yaf_Registry::get('sesson');
+	}
+
 	protected function getUserService(){
 		return new UserServiceImpl;
 	}

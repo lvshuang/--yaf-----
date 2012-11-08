@@ -1,22 +1,13 @@
-<html>
-	<head>
-		<title><?php echo $name ?>你好！</title>
-		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
-		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
-	</head>
-	<body>
-		<div id="top-bar">
-			<div class="content">
-				<span class="fl">欢迎你</span>
-				<span class="fr">欢迎你</span>
-			</div>
-		</div>
-		<div id="main" class="border yuanjiao">
-			<section>
-				<?php
-				var_dump($user);
-				?>
-			</section>
-		</div>
-	</body>
-</html>
+<?php include './application/views/header.php'; ?>
+<?php include './application/views/top-nav.php'; ?>
+<div class="container">
+
+		<section>
+			<?php
+			var_dump($user);
+			?>
+		</section>
+
+</div>
+<?php include './application/views/footer.php'; ?>
+	

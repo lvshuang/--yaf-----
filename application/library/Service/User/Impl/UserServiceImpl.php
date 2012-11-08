@@ -8,8 +8,16 @@ class UserServiceImpl extends BaseService {
 
 	protected $userDao ;
 
-	public function login(){
-
+	public function login($username, $password){
+		$user = $this->getUserDao()->findUserByName($username);
+		if (empty($user)) {
+			return false;
+		}
+		if ($user['password'] === sha1($password)) {
+			$this->getSession()->set('user', $user);
+			return true;
+		}
+		return false;
 	}
 
 	public function reg(array $user){

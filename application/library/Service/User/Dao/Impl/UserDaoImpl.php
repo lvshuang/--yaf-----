@@ -18,6 +18,11 @@ class UserDaoImpl extends BaseDao{
 		return $this->fetch($id);
 	}
 
+	public function findUserByName($username)
+	{
+		return $this->fetchRow('username=?', array($username));
+	}
+
 
 
 }
