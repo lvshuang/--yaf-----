@@ -3,7 +3,7 @@
 <div id="main" class="container">
 	<section>
 		<div class="center sbox">
-			<form action="/login/index" method="post" class="form-horizontal">
+			<form action="/login/index" method="post" class="form-horizontal" id="login-form">
 				<?php
 					if (!empty($errorMsg)) {
 				?>
@@ -29,4 +29,7 @@
 		</div>
 	</section>
 </div>
+<script type="text/javascript">
+	load('login');
+</script>
 <?php include './application/views/footer.php'; ?>
