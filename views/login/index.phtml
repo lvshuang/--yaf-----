@@ -1,0 +1,39 @@
+<?php include $webroot . '/views/header.php'; ?>
+<?php include $webroot . '/views/top-nav.php'; ?>
+<div class="container">
+	<form action="/login/index" method="post" class="form-signin" id="login-form">
+		<?php
+			if (!empty($errorMsg)) {
+		?>
+			<div class="error"><?php echo $errorMsg ?></div>
+		<?php
+			}
+		?>
+
+		<div class="control-group">
+		    <label class="control-label" for="inputEmail">用户名：</label>
+		    <div class="controls">
+		    	<input type="text" name="username" placeholder="用户名">
+		    </div>
+		</div>
+		<div class="control-group">
+		    <label class="control-label" for="inputEmail">密码：</label>
+		    <div class="controls">
+		    	<input type="password" name="password" >
+		    </div>
+		    <input type="hidden" name="_token" value="<?php echo $_SESSION['_token']; ?>" >
+		</div>
+		<div class="control-group">
+	    	<div class="controls">
+	      	<label class="checkbox">
+	        	<input type="checkbox">记住我
+	      	</label>
+	      	<button type="submit" class="btn">登录</button>
+	    	</div>
+	  	</div>
+	</form>
+</div>
+<script type="text/javascript">
+	load('login');
+</script>
+<?php include $webroot . '/views/footer.php'; ?>

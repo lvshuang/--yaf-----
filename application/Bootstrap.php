@@ -34,6 +34,10 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}
 
+	public function _initViewParameters(Yaf_Dispatcher $dispatcher) {
+        $dispatcher->initView(APP_PATH . "/views/")->assign("webroot", APP_PATH);
+    }
+
 	public function _initSesson() {
 		$sesson = Yaf_Session::getInstance();
 		Yaf_Registry::set('sesson', $sesson);

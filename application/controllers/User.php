@@ -1,8 +1,8 @@
 <?php
-class LoginController extends Common_Controller_Base
+class UserController extends Common_Controller_Base
 {
 	
-	public function indexAction(){
+	public function regAction(){
 		$request = $this->getRequest();
 		if ($request->getMethod() === 'POST' ) {
 			$_token = htmlspecialchars($this->getPost('_token'));
@@ -10,8 +10,9 @@ class LoginController extends Common_Controller_Base
 				$errorMsg = '非法表单';
 				$this->getSession()->set('_token', md5(microtime()));
 				return $this->display('index', array(
-					'title' => '用户登陆', 
+					'title' => '注册新用户', 
 					'errorMsg' => empty($errorMsg) ? null : $errorMsg,
+					'nav' => null
 				));
 			}
 
@@ -23,16 +24,11 @@ class LoginController extends Common_Controller_Base
 			$errorMsg = "用户名或密码错误！";
 		}
 		$this->getSession()->set('_token', md5(microtime()));
-		return $this->display('index', array(
-			'title' => '用户登陆', 
+		return $this->display('reg', array(
+			'title' => '注册新用户', 
 			'errorMsg' => empty($errorMsg) ? null : $errorMsg,
 			'nav' => null
 		));
-	}
-
-	public function logoutAction(){
-		$this->getSession()->del('user');
-		return $this->redirect("/index");
 	}
 
 }

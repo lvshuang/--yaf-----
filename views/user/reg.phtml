@@ -1,0 +1,49 @@
+<?php include $webroot . '/views/header.php'; ?>
+<?php include $webroot . '/views/top-nav.php'; ?>
+	
+	<div class="container" style="margin-top: 100px;">
+		<h2>注册新用户</h2>
+			<form class="form-horizontal" method="post" action="">
+				<div class="control-group">
+			    	<label class="control-label" for="username">用户名：</label>
+			    	<div class="controls">
+			      		<input type="text" id="username" placeholder="">
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<label class="control-label" for="email">邮箱：</label>
+			    	<div class="controls">
+			      		<input type="text" id="email" placeholder="">
+			    	</div>
+			  	</div>
+			 	<div class="control-group">
+			    	<label class="control-label" for="password">密码：</label>
+			    	<div class="controls">
+			      		<input type="password" id="password" placeholder="">
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<label class="control-label" for="repassword">重复密码：</label>
+			    	<div class="controls">
+			      		<input type="password" id="repassword" placeholder="">
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<label class="control-label" for="gender">性别：</label>
+			    	<div class="controls">
+			    		<select name="gender" class="span1">
+			    			<option checked="checked" value="male">女</option>
+			    			<option value="fmale">男</option>
+			    		</select>
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<div class="controls">
+			    		<input type="hidden" name="_token" value="<?php echo $_SESSION['_token'] ?>">
+				      	<button type="submit" class="btn">注册</button>
+			    	</div>
+			  	</div>
+			</form>
+	</div>
+	<script type="text/javascript">load('reg');</script>
+<?php include $webroot . '/views/footer.php'; ?>

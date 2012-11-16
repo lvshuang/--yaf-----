@@ -1,20 +1,21 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 	<div class="container">
       	<a class="brand" href="./index.html">首页</a>
       	<div class="nav-collapse collapse">
         	<ul class="nav">
-              	<li class="">
+
+              	<li <?php if ($nav == 'home_page') echo 'class="active"';?>>
                 	<a href="">首页</a>
               	</li>
-              	<li class="">
-                	<a href="">Get started</a>
+              	<li <?php if ($nav == 'me_like') echo 'class="active"';?>>
+                	<a href="">我喜欢</a>
               	</li>
-              	<li class="active">
-               		<a href="">Scaffolding</a>
+              	<li <?php if ($nav == 'me_share') echo 'class="active"';?>>
+               		<a href="">我分享</a>
               	</li>
-              	<li class="">
-                	<a href="">Base CSS</a>
+              	<li <?php if ($nav == 'find') echo 'class="active"';?>>
+                	<a href="">发现</a>
               	</li>
         	</ul>
           <div class="pull-right">
