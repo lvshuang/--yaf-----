@@ -20,13 +20,27 @@ class UserServiceImpl extends BaseService {
 		return false;
 	}
 
-	public function reg(array $user){
+	public function regUser(array $user){
+		if ($this->getUserByUsername($user['username']) || $this->getUserByEmail($user['email'])) {
+			return false;
+		}
+		$user['password'] = sha1($user['password']);
 		$user['createdTime'] = time();
 		return $this->getUserDao()->addUser($user);
 	}
 
 	public function getUser($id){
 		return $this->getUserDao()->findUser($id);
+	}
+
+	public function getUserByUsername($username)
+	{
+		return $this->getUserDao()->findUserByName($username);
+	}
+
+	public function getUserByEmail($email)
+	{
+		return $this->getUserDao()->findUserByEmail($email);
 	}
 
 	private function getUserDao(){

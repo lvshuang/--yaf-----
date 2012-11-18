@@ -23,6 +23,9 @@ class UserDaoImpl extends BaseDao{
 		return $this->fetchRow('username=?', array($username));
 	}
 
-
+	public function findUserByEmail($email)
+	{
+		return $this->fetchRow('email=?', array($email));
+	}
 
 }
