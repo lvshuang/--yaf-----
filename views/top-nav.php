@@ -12,7 +12,7 @@
                 	<a href="">我喜欢</a>
               	</li>
               	<li <?php if ($nav == 'me_share') echo 'class="active"';?>>
-               		<a href="">我分享</a>
+               		<a href="/post/publish">分享</a>
               	</li>
               	<li <?php if ($nav == 'find') echo 'class="active"';?>>
                 	<a href="">发现</a>

@@ -1,17 +1,13 @@
 <?php
 
 class PostController extends Common_Controller_Base {
-	//关闭自动渲染
-	public function init() {
-		Yaf_Dispatcher::getInstance()->disableView();
-	}
-
-	public function indexAction() {
-		$service = $this->getUserService();
-		Yaf_Registry::get('dbHandle');
-		$this->initView();
-
-		// $this->display('index');
+	
+	public function publishAction() {
+		$this->getSession()->set('_token_post_publish', md5(microtime()));
+		$this->display('publish', array(
+			'name' => 'YAF实例----------', 
+			'nav' => 'home_page'
+		));
 	}
 
 	

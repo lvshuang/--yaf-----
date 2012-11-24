@@ -11,7 +11,11 @@
 				var module = module;
 				seajs.use('/public/js/app.js', function(app){
 					app.bootstrap();
-					if (module) {
+					if (module.constructor === Array) {
+						$.each(module, function(index){
+							app.load(module[index]);
+						});
+					} else {
 						app.load(module);
 					}
 				});

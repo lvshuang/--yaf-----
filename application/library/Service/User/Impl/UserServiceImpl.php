@@ -6,7 +6,6 @@ use Common\Service\BaseService;
 
 class UserServiceImpl extends BaseService {
 
-	protected $userDao ;
 
 	public function login($username, $password){
 		$user = $this->getUserDao()->findUserByName($username);

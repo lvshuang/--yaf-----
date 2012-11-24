@@ -1,0 +1,35 @@
+<?php include $webroot . '/views/header.php'; ?>
+<?php include $webroot . '/views/top-nav.php'; ?>
+	
+	<div class="container" style="margin-top: 100px;">
+		<h4>发布新内容</h4>
+			<div class="error">
+				<?php
+					if (!empty($errorMsg)) {
+						echo $errorMsg;
+					}
+				 ?>
+			</div>
+			<form class="form-horizontal" method="post" action="">
+				<div class="control-group">
+			    	<label class="control-label" for="title">标题：</label>
+			    	<div class="controls">
+			      		<input class="span8" type="text" id="title" name="title" <?php if (!empty($post['title'])) echo 'value=' .$post['title']; ?> placeholder="" />
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<label class="control-label" for="email">内容：</label>
+			    	<div class="controls">
+			      		<textarea id="content" class="span8" rows="16" name="content" placeholder=""></textarea>
+			    	</div>
+			  	</div>
+			  	<div class="control-group">
+			    	<div class="controls">
+			    		<input type="hidden" name="_token" value="<?php echo $_SESSION['_token_post_publish'] ?>">
+				      	<button type="submit" class="btn btn-large btn-primary pull-right" style="margin-right:152px;">发布</button>
+			    	</div>
+			  	</div>
+			</form>
+	</div>
+	<script type="text/javascript">load('post-publish');</script>
+<?php include $webroot . '/views/footer.php'; ?>

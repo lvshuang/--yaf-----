@@ -4,12 +4,76 @@
 		"selected_items":
 		[
 			[
-				"handler",
-				"handleEnterprise"
+				"em",
+				"email"
+			],
+			[
+				"getUserBy",
+				"getUserByEmail"
+			],
+			[
+				"fetch",
+				"fetchRow"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"getUser",
+				"getUserDao"
+			],
+			[
+				"userna",
+				"username"
 			],
 			[
 				"va",
-				"value"
+				"validateErrorMsges"
+			],
+			[
+				"vi",
+				"validateErrorMsges"
+			],
+			[
+				"usern",
+				"username"
+			],
+			[
+				"er",
+				"errorMsg"
+			],
+			[
+				"val",
+				"validateErrorMsges"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"handler",
+				"handleEnterprise"
 			],
 			[
 				"getD",
@@ -18,14 +82,6 @@
 			[
 				"li",
 				"livingDistrict"
-			],
-			[
-				"user",
-				"user"
-			],
-			[
-				"em",
-				"empty"
 			],
 			[
 				"for",
@@ -58,10 +114,6 @@
 			[
 				"getW",
 				"getWorkerByIdcard"
-			],
-			[
-				"getUser",
-				"getUserEnterpriseInfo"
 			],
 			[
 				"enter",
@@ -400,20 +452,12 @@
 				"urgent"
 			],
 			[
-				"val",
-				"validKeys"
-			],
-			[
 				"ke",
 				"keyword"
 			],
 			[
 				"t",
 				"town"
-			],
-			[
-				"dis",
-				"districtId"
 			],
 			[
 				"pr",
@@ -470,50 +514,6 @@
 			[
 				"dr",
 				"drawer"
-			],
-			[
-				"ta",
-				"talkWiths"
-			],
-			[
-				"unre",
-				"unreadFlags"
-			],
-			[
-				"mem",
-				"memberIds"
-			],
-			[
-				"thr",
-				"thread"
-			],
-			[
-				"memb",
-				"members"
-			],
-			[
-				"thre",
-				"thread"
-			],
-			[
-				"message",
-				"message_ref_dao"
-			],
-			[
-				"reve",
-				"receiverNicknames"
-			],
-			[
-				"recei",
-				"receiverNicknames"
-			],
-			[
-				"rece",
-				"receiverNicknames"
-			],
-			[
-				"mess",
-				"message_thread_dao"
 			]
 		]
 	},
@@ -528,10 +528,10 @@
 			}
 		},
 		{
-			"file": "application/controllers/User.php",
+			"file": "views/user/reg.phtml",
 			"settings":
 			{
-				"buffer_size": 953,
+				"buffer_size": 2821,
 				"line_ending": "Unix"
 			}
 		},
@@ -542,36 +542,12 @@
 				"buffer_size": 1083,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "application/views/top-nav.php",
-			"settings":
-			{
-				"buffer_size": 1298,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/index/index.phtml",
-			"settings":
-			{
-				"buffer_size": 251,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/login/index.phtml",
-			"settings":
-			{
-				"buffer_size": 1092,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 75.0,
 		"selected_items":
 		[
 			[
@@ -608,6 +584,18 @@
 	},
 	"file_history":
 	[
+		"/var/www/yaf/application/controllers/User.php",
+		"/var/www/yaf/application/library/Service/User/Impl/UserServiceImpl.php",
+		"/var/www/yaf/application/library/Service/User/Dao/Impl/UserDaoImpl.php",
+		"/var/www/yaf/views/top-nav.php",
+		"/var/www/yaf/views/login/index.phtml",
+		"/var/www/yaf/views/header.php",
+		"/var/www/yaf/application/views/top-nav.php",
+		"/var/www/yaf/public/css/bootstrap.css",
+		"/var/www/yaf/public/js/modules/login.js",
+		"/var/www/yaf/public/css/site.css",
+		"/var/www/yaf/views/index/index.phtml",
+		"/var/www/yaf/application/controllers/Login.php",
 		"/var/www/bsb360/src/Topxia/Service/Util/Impl/DistrictServiceImpl.php",
 		"/var/www/bsb360/src/Topxia/AdminBundle/Resources/public/js/utils/save-modal-handler.js",
 		"/var/www/bsb360/doc/database/mirgrate.sql",
@@ -723,19 +711,7 @@
 		"/var/www/bsb360/src/Topxia/WebBundle/Resources/views/ContactResource/related-panel.html.twig",
 		"/var/www/bsb360/src/Topxia/Service/ContactResource/Impl/ContactResourceServiceImpl.php",
 		"/var/www/bsb360/src/Topxia/WebBundle/Controller/ContactResourceController.php",
-		"/var/www/bsb360/.gitignore",
-		"/var/www/bsb360/vendor/sphinx-client/SphinxClient.php",
-		"/var/www/bsb360/etc/sphinx_dev.conf",
-		"/var/www/bsb360/etc/sphinx.conf",
-		"/var/www/bsb360/src/Topxia/WebBundle/Util/ImageUploadHelper.php",
-		"/home/lvshuang/Desktop/coreseek-3.2.14/csft-3.2.14/src/sphinxexpr.cpp",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/public/js/pages/expert_counseling.js",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/public/js/pages/enterprise_inspection_add.js",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/public/js/pages/risk_report_add.js",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/public/js/pages/enterprise_adverse_report_add.js",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/public/js/pages/worker_credit_report.js",
-		"/var/www/bsb360/src/Topxia/WebBundle/Controller/SearchController.php",
-		"/var/www/bsb360/src/Topxia/WebBundle/Resources/views/Search/list.html.twig"
+		"/var/www/bsb360/.gitignore"
 	],
 	"find":
 	{
@@ -840,6 +816,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"repassword",
+			"password",
+			"username",
+			"index",
+			"haystack",
+			"gender",
+			"inputPassword",
+			"inputEmail",
+			"input",
 			"['']",
 			"\n            ",
 			"thead",
@@ -958,16 +943,7 @@
 			"ExprEval ( this->m_pArg, tMatch )",
 			"disabled",
 			"SetWeights",
-			"weight",
-			"highlight",
-			"highlightTextFilter",
-			"categoryPath",
-			"v.1.25",
-			"v.1.22",
-			"maxmatches",
-			"max_matches",
-			"AddQuery",
-			"RunQueries"
+			"weight"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1006,7 +982,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1038,27 +1014,27 @@
 				},
 				{
 					"buffer": 1,
-					"file": "application/controllers/User.php",
+					"file": "views/user/reg.phtml",
 					"settings":
 					{
-						"buffer_size": 953,
+						"buffer_size": 2821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								616,
+								616
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 792.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1075,33 +1051,6 @@
 						"selection":
 						[
 							[
-								962,
-								962
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/top-nav.php",
-					"settings":
-					{
-						"buffer_size": 1298,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
 								0,
 								0
 							]
@@ -1109,64 +1058,10 @@
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/index/index.phtml",
-					"settings":
-					{
-						"buffer_size": 251,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "views/login/index.phtml",
-					"settings":
-					{
-						"buffer_size": 1092,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1092,
-								1092
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1216,6 +1111,26 @@
 		"selected_items":
 		[
 			[
+				"userdao",
+				"application/library/Service/User/Dao/Impl/UserDaoImpl.php"
+			],
+			[
+				"lo",
+				"application/controllers/Login.php"
+			],
+			[
+				"userser",
+				"application/library/Service/User/Impl/UserServiceImpl.php"
+			],
+			[
+				"boo",
+				"public/css/bootstrap.css"
+			],
+			[
+				"site",
+				"public/css/site.css"
+			],
+			[
 				"top",
 				"application/views/top-nav.php"
 			],
@@ -1226,10 +1141,6 @@
 			[
 				"user.",
 				"application/controllers/User.php"
-			],
-			[
-				"boo",
-				"application/Bootstrap.php"
 			],
 			[
 				"districtservice",
@@ -1318,10 +1229,6 @@
 			[
 				"baseobject/list.js",
 				"src/Topxia/AdminBundle/Resources/public/js/pages/baseobject/list.js"
-			],
-			[
-				"userser",
-				"src/Topxia/Service/User/UserService.php"
 			],
 			[
 				"enterpriseser",
@@ -1446,10 +1353,6 @@
 			[
 				"userdaoimp",
 				"src/Topxia/Service/User/Dao/Impl/UserDaoImpl.php"
-			],
-			[
-				"userdao",
-				"src/Topxia/Service/User/Dao/UserDao.php"
 			],
 			[
 				"basedao",
@@ -1588,10 +1491,6 @@
 				"vendor/sphinx-client/SphinxClient.php"
 			],
 			[
-				"site",
-				"src/Topxia/WebBundle/Resources/public/css/site.css"
-			],
-			[
 				"weben",
 				"src/Topxia/WebBundle/Twig/Extension/WebExtension.php"
 			],
@@ -1722,10 +1621,6 @@
 			[
 				"settingdao",
 				"src/Topxia/Service/Setting/Dao/SettingDao.php"
-			],
-			[
-				"settingcon",
-				"src/Topxia/AdminBundle/Controller/SettingController.php"
 			]
 		],
 		"width": 0.0
