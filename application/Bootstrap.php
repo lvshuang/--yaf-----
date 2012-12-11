@@ -34,6 +34,12 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Registry::set('connection', new Connection($dsn, $username, $password));
 	}
 
+	// public function _initTwig(Yaf_Dispatcher $dispatcher) {
+	// 	Yaf_Loader::import("Twig/Adapter.php");
+	// 	$twig = new Twig_Adapter(Yaf_Registry::get("config")->get('application')->viewPath, Yaf_Registry::get("config")->get('application')->viewCachePath);
+	// 	$dispatcher->setView($twig);
+	// }
+
 	public function _initViewParameters(Yaf_Dispatcher $dispatcher) {
         $dispatcher->initView(APP_PATH . "/views/")->assign("webroot", APP_PATH);
     }

@@ -1,12 +1,12 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 	<div class="container">
-      	<a class="brand" href="./index.html">首页</a>
+      	<a class="brand" href="/">首页</a>
       	<div class="nav-collapse collapse">
         	<ul class="nav">
 
               	<li <?php if ($nav == 'home_page') echo 'class="active"';?>>
-                	<a href="">首页</a>
+                	<a href="/">首页</a>
               	</li>
               	<li <?php if ($nav == 'me_like') echo 'class="active"';?>>
                 	<a href="">我喜欢</a>

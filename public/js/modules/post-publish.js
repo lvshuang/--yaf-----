@@ -1,13 +1,9 @@
 define(function(require, exports, module){
 
-	require('ckeditor');
-	require('ckeditor.config');
+	var editer = require('../utils/kindeditor-helper');
 
 	var onReady = function() {
-		CKEDITOR.editorConfig  = function(config) {
-			config.language = 'zh-cn';
-		};
-		CKEDITOR.replace( 'content' );
+		editer.createMiniEditor($('#content'));
 	};
 
 	exports.bootstrap = function (context, options){

@@ -5,6 +5,7 @@ class IndexController extends Common_Controller_Base
 	public function indexAction(){
 		$request = $this->getRequest();
 		$user = $this->getUserService()->getUser(1);
+		
 		$this->display('index', array(
 			'name' => 'YAF实例----------', 
 			'user' => $user,

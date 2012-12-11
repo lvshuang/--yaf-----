@@ -1,8 +1,7 @@
 seajs.config({
     alias: {
         'jquery': 'jquery/1.7.2/jquery-debug',
-        'ckeditor': 'ckeditor/3.6.5/ckeditor',
-        'ckeditor.config': 'ckeditor/3.6.5/config'
+        'kindeditor': 'kindeditor/4.1.3/kindeditor-debug'
     }
 });
 
