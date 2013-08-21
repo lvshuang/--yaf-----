@@ -1,14 +1,15 @@
 <?php
-class IndexController extends Common_Controller_Base
+/**
+* Notice: If the file name end by 'Controller', Yaf well load it from the controller folder.
+* So, I create a file named ControllerBase, it should be named BaseController.
+*/
+
+class IndexController extends Common_ControllerBase
 {
-	
-	public function indexAction(){
+	public function indexAction() {
 		$request = $this->getRequest();
-		$user = $this->getUserService()->getUser(1);
-		
 		$this->display('index', array(
 			'name' => 'YAF实例----------', 
-			'user' => $user,
 			'nav' => 'home_page'
 		));
 	}
