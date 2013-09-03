@@ -1,5 +1,5 @@
 <?php
-class LoginController extends Common_Controller_Base
+class LoginController extends Common_ControllerBase
 {
 	
 	public function indexAction(){
@@ -17,7 +17,7 @@ class LoginController extends Common_Controller_Base
 
 			$username = htmlspecialchars($this->getPost('username'));
 			$password = htmlspecialchars($this->getPost('password'));
-			if ($user = $this->getUserService()->login($username, $password)) {
+			if ($user = $this->getService('User.UserService')->login($username, $password)) {
 				return $this->redirect("/index");
 			}
 			$errorMsg = "用户名或密码错误！";

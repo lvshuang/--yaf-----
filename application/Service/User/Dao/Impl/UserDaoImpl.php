@@ -1,9 +1,6 @@
 <?php
-namespace Service\User\Dao\Impl;
 
-use Common\Dao\BaseDao;
-
-class UserDaoImpl extends BaseDao{
+class Service_User_Dao_Impl_UserDaoImpl extends Common_BaseDao{
 
 	protected $table = 'user';
 

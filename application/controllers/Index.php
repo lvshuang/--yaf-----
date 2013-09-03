@@ -8,6 +8,7 @@ class IndexController extends Common_ControllerBase
 {
 	public function indexAction() {
 		$request = $this->getRequest();
+		$user = $this->getService('User.UserService');
 		$this->display('index', array(
 			'name' => 'YAF实例----------', 
 			'nav' => 'home_page'

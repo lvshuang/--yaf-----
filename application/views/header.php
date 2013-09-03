@@ -2,8 +2,8 @@
 	<head>
 		<title><?php if (!empty($title)) {echo $title;} ?> YAF实例</title>
 		<meta charset="utf8" />
-		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
 		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
 
 		<script type="text/javascript" src="/public/js/seajs/1.3.0/sea-debug.js"></script>
 		<script type="text/javascript">

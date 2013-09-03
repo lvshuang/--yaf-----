@@ -1,5 +1,5 @@
-<?php include $webroot . '/views/header.php'; ?>
-<?php include $webroot . '/views/top-nav.php'; ?>
+<?php include $viewroot . '/header.php'; ?>
+<?php include $viewroot . '/top-nav.php'; ?>
 <div class="container">
 	<form action="/login/index" method="post" class="form-signin" id="login-form">
 		<?php
@@ -25,9 +25,6 @@
 		</div>
 		<div class="control-group">
 	    	<div class="controls">
-	      	<label class="checkbox">
-	        	<input type="checkbox">记住我
-	      	</label>
 	      	<button type="submit" class="btn">登录</button>
 	    	</div>
 	  	</div>
@@ -36,4 +33,4 @@
 <script type="text/javascript">
 	load('login');
 </script>
-<?php include $webroot . '/views/footer.php'; ?>
+<?php include $viewroot . '/footer.php'; ?>

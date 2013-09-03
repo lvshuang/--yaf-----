@@ -59,9 +59,11 @@ class Common_ControllerBase extends Yaf_Controller_Abstract {
         if (Yaf_Registry::has('service_' . $service)) {
             return Yaf_Registry::get('service_' . $service);
         }
-        $service = new $service;
-        Yaf_Registry::set('service_' . $service, $service);
-        return $service;
+        $servicePathInfo = explode('.', $service);
+        $serviceName = 'Service_' . $servicePathInfo['0'] . '_Impl_' . $servicePathInfo[1] . 'Impl';
+        $serviceInstance = new $serviceName;
+        Yaf_Registry::set('service_' . $service, $serviceInstance);
+        return $serviceInstance;
     }
 
 }

@@ -1,14 +1,10 @@
 <?php
 
-namespace Service\User\Impl;
-
-use Common\Service\BaseService;
-
-class UserServiceImpl extends BaseService {
+class Service_User_Impl_UserServiceImpl extends Common_BaseService {
 
 
 	public function login($username, $password){
-		$user = $this->getUserDao()->findUserByName($username);
+		$user = $this->getDao('User.UserDao')->findUserByName($username);
 		if (empty($user)) {
 			return false;
 		}
@@ -25,24 +21,21 @@ class UserServiceImpl extends BaseService {
 		}
 		$user['password'] = sha1($user['password']);
 		$user['createdTime'] = time();
-		return $this->getUserDao()->addUser($user);
+		return $this->getDao('User.UserDao')->addUser($user);
 	}
 
 	public function getUser($id){
-		return $this->getUserDao()->findUser($id);
+		return $this->getDao('User.UserDao')->findUser($id);
 	}
 
 	public function getUserByUsername($username)
 	{
-		return $this->getUserDao()->findUserByName($username);
+		return $this->getDao('User.UserDao')->findUserByName($username);
 	}
 
 	public function getUserByEmail($email)
 	{
-		return $this->getUserDao()->findUserByEmail($email);
+		return $this->getDao('User.UserDao')->findUserByEmail($email);
 	}
 
-	private function getUserDao(){
-		return new \Service\User\Dao\Impl\UserDaoImpl();
-	}
 }

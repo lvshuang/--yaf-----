@@ -1,5 +1,5 @@
 <?php
-class BaseDao {
+class Common_BaseDao {
 
 	private $connection;
 
